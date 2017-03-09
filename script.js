@@ -66,7 +66,6 @@ var snakeGame = (function () {
 			removeFoodFromCell(foodCell);
 			amOfFood--;
 			score++;
-			speed=speed-50;
 		}
 	}
 	
@@ -131,7 +130,7 @@ var changeDir = function(){
 	if (right)
 		return [1,0];
 }
-var speed = 500;
+
 // Главный цикл игры.
 let timer = setInterval(function () {
     if (!snakeGame.playStep())
@@ -140,7 +139,7 @@ let timer = setInterval(function () {
         clearInterval(timer);
         alert('Game Over! Score: ' + snakeGame.getScore());
     }
-}, speed);
+}, 500);
 
 var up = false;
 var down = false;
